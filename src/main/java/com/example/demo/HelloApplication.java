@@ -10,8 +10,12 @@ public class HelloApplication {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Principal: ");
-        int principal = scanner.nextInt();
+        while (true) {
+            System.out.println("Principal: ");
+            int principal = scanner.nextInt();
+            if (principal >= 1000 && principal <= 1_000_000)
+                break;
+            System.out.println("Enter a value between 1000 and 1000000");
 
         System.out.println("Annual Interest Rate: ");
         float annualInterest = scanner.nextFloat();
