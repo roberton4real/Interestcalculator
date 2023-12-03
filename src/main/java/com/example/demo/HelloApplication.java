@@ -13,7 +13,7 @@ public class HelloApplication {
 
         int principal = getInput("Principal: ", 1000, 1_000_000, scanner);
         float annualInterest = getInput("Annual Interest Rate: ", 0, 30, scanner);
-        byte years = getInput("Period (Years): ", 1, 30, scanner);
+        int years = getInput("Period (Years): ", 1, 30, scanner);
 
         // Close the Scanner to release resources
         scanner.close();
@@ -51,7 +51,7 @@ public class HelloApplication {
         return input;
     }
 
-    private static double calculateMortgage(int principal, float annualInterest, byte years) {
+    private static double calculateMortgage(int principal, float annualInterest, int years) {
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         int numberOfPayments = years * MONTHS_IN_YEAR;
         return principal * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
