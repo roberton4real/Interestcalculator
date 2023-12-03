@@ -12,5 +12,17 @@ public class HelloApplication {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Principal: ");
+        int principal = scanner.nextInt();
+
+        System.out.println("Annual Interest Rate: ");
+        float annualInterest = scanner.nextFloat();
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+
+        System.out.println("Period (Years): ");
+        byte years = scanner.nextByte();
+        int numberOfPayments = years * MONTHS_IN_YEAR;
+
+        double mortgage = principal
+
     }
 }
